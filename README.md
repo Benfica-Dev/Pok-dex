@@ -25,4 +25,4 @@ Projeto de Pokedéx, inspirada no jogo Pokémon GO e no anime e mangá Pokémon.
 1. Clone este repositório:
     ```bash
     git clone
-    https://github.com/Benfica-Dev/Pokedex.git
+    https://github.com/Benfica-Dev/Pok-dex.git
