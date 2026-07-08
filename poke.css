@@ -18,6 +18,23 @@ h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.menu{
+    margin: 20px;
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(255, 252, 249);
+    background-color: rgb(48, 48, 48);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover{
+    background-color: rgb(255, 252, 249);
+    color: rgb(48, 48, 48);
+}
+
 #grid-pokedex{
     background-color: rgb(255, 252, 249);
     border-radius: 10px;
