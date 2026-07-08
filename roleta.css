@@ -1,0 +1,58 @@
+body{
+    background-color:rgb(48, 48, 48);
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu{
+    margin: 20px;
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(255, 252, 249);
+    background-color: rgb(48, 48, 48);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover{
+    background-color: rgb(255, 252, 249);
+    color: rgb(48, 48, 48);
+}
+
+.gacha-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+#resultado-sorteio{
+    background-color: rgb(255, 252, 249);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px dashed rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    padding: 20px;
+}
+
+#resultado-sorteio:active{
+    transform: translateY(5px);
+}
+
+#resultado-sorteio:hover{
+    background-color: rgb(48, 48, 48);
+}
