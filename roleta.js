@@ -11,7 +11,7 @@ const areaResultado = document.getElementById('resultado-sorteio');
 botaoSortear.addEventListener('click', async () => {
     
     // Texto temporário de carregamento
-    areaResultado.innerHTML = "<p>Conectando com a PokéAPI... 🌐</p>";
+    areaResultado.innerHTML = "<p>Conectando com a PokéAPI... </p>";
     
     // --- LÓGICA DA RARIDADE ---
     const chance = Math.floor(Math.random() * 100) + 1;
