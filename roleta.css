@@ -1,86 +1,143 @@
-body{
-    background-color:rgb(48, 48, 48);
+/* 1. Configuração Geral da Tela (Fundo Escuro e Centralização) */
+body {
+    background-color: #2f3542; /* Mantém o fundo escuro elegante que está no seu print */
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: min-content;
     min-height: 100vh;
+    color: white;
 }
 
-.menu{
-    margin: 20px;
+/* 2. Menu de Navegação Superior */
+.menu {
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
-.menu a{
+
+.menu a {
     text-decoration: none;
-    color: rgb(255, 252, 249);
-    background-color: rgb(48, 48, 48);
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.menu a:hover{
-    background-color: rgb(255, 252, 249);
-    color: rgb(48, 48, 48);
-}
-
-.gacha-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    justify-content: center;
-    gap: 20px;
-}
-
-#resultado-sorteio{
-    background-color: rgb(255, 252, 249);
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    border: 2px dashed rgb(48, 48, 48);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.5s ease;
-    padding: 20px;
-}
-
-#resultado-sorteio:active{
-    transform: translateY(5px);
-}
-
-#resultado-sorteio:hover{
-    background-color: rgb(48, 48, 48);
-}
-
-@keyframes aparecerCard{
-    0%{
-        transform: scale(0);
-        opacity: 0;
-    }
-    100%{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Bordas e efeitos baseados na raridade */
-.card-comum { border: 3px solid #2ed573 !important; }
-.card-raro { border: 3px solid #1e90ff !important; box-shadow: 0 0 15px rgba(30, 144, 255, 0.5); }
-.card-lendario { 
-    border: 3px solid #ffa502 !important; 
-    box-shadow: 0 0 25px rgba(255, 165, 0, 0.8);
-    background: linear-gradient(135deg, #fff, #ffeaa7) !important;
-}
-
-/* Tag de raridade no topo da carta */
-.raridade-tag {
-    font-size: 0.75rem;
+    color: #ff4757;
     font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: #ff4757;
+    color: white;
+}
+
+/* 3. Container da Roleta */
+.gacha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* 4. A Área da Carta (Onde o Charmander está) */
+#resultado-sorteio {
+    background-color: #ffffff;
+    width: 300px;
+    height: 420px;
+    border-radius: 20px;
+    border: 4px dashed #747d8c; /* Borda tracejada padrão */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Quando o Pokémon for sorteado, a borda vira sólida através do JS */
+#resultado-sorteio.tem-pokemon {
+    border: 4px solid #1e272e;
+}
+
+/* 5. Estrutura Interna da Carta do Pokémon */
+.pokemon-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distribui os itens de cima a baixo */
+    color: #1e272e; /* Texto escuro dentro da carta branca */
+}
+
+/* Tag de Raridade */
+.raridade-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ID (#004) */
+.card-id {
+    font-weight: bold;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* O SEGREDO: Controlando o tamanho da Imagem do Pokémon */
+.card-img {
+    width: 160px;  /* Força a imagem a ter um tamanho fixo e controlado */
+    height: 160px;
+    object-fit: contain;
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.15)); /* Sombra charmosa no Pokémon */
+}
+
+/* Nome do Pokémon */
+.card-name {
+    font-size: 1.6rem;
+    margin: 5px 0;
+    text-transform: capitalize; /* Primeira letra Maiúscula */
+    font-weight: bold;
+}
+
+/* 6. Badges dos Elementos (Tipos) */
+.type-badge {
+    display: inline-block;
+    padding: 6px 25px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cores dos Tipos */
+.type-badge.fire { background-color: #ff4757; }
+.type-badge.water { background-color: #1e90ff; }
+.type-badge.grass { background-color: #2ed573; }
+.type-badge.electric { background-color: #ffa502; }
+
+/* 7. Estilização do Botão de Sortear */
+#btn-sortear {
+    background-color: #ff4757;
+    color: white;
+    border: 3px solid #1e272e;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #c0392b, 0 8px 15px rgba(0,0,0,0.4);
+    transition: all 0.1s ease;
+}
+
+#btn-sortear:active {
+    box-shadow: 0 2px 0 #c0392b, 0 3px 6px rgba(0,0,0,0.2);
+    transform: translateY(4px);
 }
