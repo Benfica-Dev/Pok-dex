@@ -67,3 +67,20 @@ body{
         opacity: 1;
     }
 }
+
+/* Bordas e efeitos baseados na raridade */
+.card-comum { border: 3px solid #2ed573 !important; }
+.card-raro { border: 3px solid #1e90ff !important; box-shadow: 0 0 15px rgba(30, 144, 255, 0.5); }
+.card-lendario { 
+    border: 3px solid #ffa502 !important; 
+    box-shadow: 0 0 25px rgba(255, 165, 0, 0.8);
+    background: linear-gradient(135deg, #fff, #ffeaa7) !important;
+}
+
+/* Tag de raridade no topo da carta */
+.raridade-tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
