@@ -22,15 +22,15 @@ botaoSortear.addEventListener('click', async () => {
     if (chance <= 70) {
         listaEscolhida = comuns;
         classeRaridade = "card-comum";
-        textoRaridade = "COMUM 🟢";
+        textoRaridade = "COMUM ";
     } else if (chance <= 95) {
         listaEscolhida = raros;
         classeRaridade = "card-raro";
-        textoRaridade = "RARO 🔵";
+        textoRaridade = "RARO ";
     } else {
         listaEscolhida = lendarios;
         classeRaridade = "card-lendario";
-        textoRaridade = "LENDÁRIO 🌟";
+        textoRaridade = "LENDÁRIO ";
     }
 
     // Escolhe um ID aleatório de dentro da lista sorteada

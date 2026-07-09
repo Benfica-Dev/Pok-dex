@@ -121,6 +121,11 @@ body {
 .type-badge.water { background-color: #1e90ff; }
 .type-badge.grass { background-color: #2ed573; }
 .type-badge.electric { background-color: #ffa502; }
+.type-badge.poison { background-color: #c402ff; }
+.type-badge.dragon { background-color: #ec053f; }
+.type-badge.normal { background-color: #3a3a3a; }
+.type-badge.bug { background-color: #0c7a0c; }
+.type-badge.ice { background-color: #02ffea; }
 
 /* 7. Estilização do Botão de Sortear */
 #btn-sortear {
