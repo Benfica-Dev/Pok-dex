@@ -41,7 +41,7 @@ body {
     gap: 25px;
 }
 
-/* 4. A Área da Carta (Onde o Charmander está) */
+/* 4. A Área da Carta */
 #resultado-sorteio {
     background-color: #ffffff;
     width: 300px;
@@ -126,6 +126,7 @@ body {
 .type-badge.normal { background-color: #3a3a3a; }
 .type-badge.bug { background-color: #0c7a0c; }
 .type-badge.ice { background-color: #02ffea; }
+.type-badge.psychic { background-color: #a7016f; }
 
 /* 7. Estilização do Botão de Sortear */
 #btn-sortear {

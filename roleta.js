@@ -66,7 +66,7 @@ botaoSortear.addEventListener('click', async () => {
         `;
 
     } catch (erro) {
-        areaResultado.innerHTML = "<p>Erro ao buscar Pokémon. Tente novamente! ❌</p>";
+        areaResultado.innerHTML = "<p>Erro ao buscar Pokémon. Tente novamente! </p>";
         console.error(erro);
     }
 });
